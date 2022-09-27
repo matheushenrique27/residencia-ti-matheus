@@ -26,15 +26,15 @@ Este documento serve como norte para o treinamento nas Tecnologias e formas de c
 
 Para o treinamento, vamos exercitar o uso do git com um repositorio único para todos os residentes, com o objetivo puramente didática no uso do git e github em um repositório colaborativo.
 
-Cada residente deverá criar uma branch com suas iniciais e o nome do projeto, por exemplo: westefns-projeto-mvc e na Raiz do projeto deve criar uma pasta com seu nome e uma para para cada projeto assim que for criando.
+Cada residente deverá criar uma branch com suas iniciais e o nome do projeto, por exemplo: westefns-projeto-mvc e na Raiz do projeto, no mesmo nivel do Arquivo Readme.md, deve criar uma pasta com seu nome e uma para para cada projeto assim que for criando.
 
 Vamos Fazer a mesma aplicação de diferente formas de arquiteturas, iniciando de forma simples com um mvc rodando em um windows até chegar-mos a api com frontend separado rodando em um docker.
 
-### O projeto base
+## O projeto base
 
 O nosso projeto base será um sistema para controle financeiro de pessoas.
 
-## Esse sistema deve ser capaz de:
+### Esse sistema deve ser capaz de:
 
 - Realizar login/logout como o cadastro de novos usuários e a recupeção de senhas.
 - Receber um novo deposito, com valor, descrição, data de depósito, usuário de depósito sendo o usuário logado.
@@ -42,4 +42,11 @@ O nosso projeto base será um sistema para controle financeiro de pessoas.
 - A finalidade do saque são por exemplo: Alimentação, Entreterimento, Educação. Tendo um CRUD para isso com sendo o delete apenas marcando com inativo, e cada usuário poderá ter sua lista própria de finalidades.
 - O sistema deverá mostrar uma listagem de deposito e saques na home da aplicação, com a possibilidade de realização de filtros por data, finalidades, filtrar apenas os saques, depósitos ou mostrar saques e depositos.
 
+### Projeto em MVC 
+
+Esse projeto deve está na sua pasta dentro de uma pasta com o nome MVC
+
+Nesse modo, você pode criar um app mvc do .net 6, utiliza um Banco em Memoria (Memory Database) ou se prefirir subir um postgres em um docker e utilizar migrações apenas para esse projeto.
+
+O objetivo é criar a aplicação usando apenas o .net 6 com bootstrap 5 e jquery se precisar.
 
