@@ -50,3 +50,19 @@ Nesse modo, você pode criar um app mvc do .net 6, utiliza um Banco em Memoria (
 
 O objetivo é criar a aplicação usando apenas o .net 6 com bootstrap 5 e jquery se precisar.
 
+### Projeto em MVC 
+
+Esse projeto deve está na sua pasta dentro de uma pasta com o nome MVC.
+
+Nesse modo, você pode criar um app mvc do .net 6, utiliza um Banco em Memoria (Memory Database) ou se prefirir subir um postgres em um docker e utilizar migrações apenas para esse projeto.
+
+O objetivo é criar a aplicação usando apenas o .net 6 com bootstrap 5 e jquery se precisar.
+
+#### Projeto em MVC + DDD
+
+Esse projeto deve está na sua pasta dentro de uma pasta com o nome MVCDDD.
+
+Nesse modo, você pode criar um app mvc do .net 6, utiliza um Banco em Memoria (Memory Database) ou se prefirir subir um postgres em um docker e utilizar migrações apenas para esse projeto, sendo que esse deverá está dividido nos moldes do DDD ensinado por Eduardo Pires.
+
+O objetivo é criar a aplicação usando apenas o .net 6 com bootstrap 5 e jquery se precisar.
+
