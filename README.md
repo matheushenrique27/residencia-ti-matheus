@@ -66,3 +66,20 @@ Nesse modo, você pode criar um app mvc do .net 6, utiliza um Banco em Memoria (
 
 O objetivo é criar a aplicação usando apenas o .net 6 com bootstrap 5 e jquery se precisar.
 
+
+### Projeto em API
+
+Esse projeto deve está na sua pasta dentro de uma pasta com o nome API.
+
+Nesse modo, você pode criar um app api do .net 6, utiliza um Banco em Memoria (Memory Database) ou se prefirir subir um postgres em um docker e utilizar migrações apenas para esse projeto, A API deve ser protegida por autenticação com token JWT.
+
+O objetivo é criar a aplicação usando apenas o .net 6 com o swagger para documentação.
+
+
+### Projeto em API + Front-end
+
+Esse projeto deve está na sua pasta dentro de uma pasta com o nome APINest.
+
+Nesse modo, você pode criar um app api do .net 6, utiliza um Banco em Memoria (Memory Database) ou se prefirir subir um postgres em um docker e utilizar migrações apenas para esse projeto, A API deve ser protegida por autenticação com token JWT e um front-end para a aplicação pode ser feito em nest, vue ou react.
+
+O objetivo é criar a aplicação usando  o .net 6 e um frontend para consumir a API.
