@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B1zpvn7aQrZU5UNywHso2QKYdra92ci9LVh6joahcOxvtgLaSRbpp83s24EGSLPvaKG0PnTFcPBPN2ltWBXHQw==",
+  "dgSpecHash": "TJGfGDDrPQF9AQj3EC/FlaUxTvhY0POvqgGcqFi+5A+w+szF5bT1MzzVKk1StNRhR8cgwxKpyp2qxQUiO7nL4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\09465216623\\Documents\\Programação\\LigaBankMVC\\LigaBankMVC\\LigaBankMVC\\LigaBankMVC.csproj",
+  "projectFilePath": "C:\\Users\\09465216623\\source\\repos\\matheushenrique27\\residencia-ti-matheus\\LigaBankMVC\\LigaBankMVC\\LigaBankMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\09465216623\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\09465216623\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
