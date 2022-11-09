@@ -1,0 +1,14 @@
+﻿@model LigaBankMVC.Models.Conta
+
+@{ViewData["Title"] = "Details";}
+
+<h4>Olá, @Html.DisplayNameFor(model => model.Id)!</h4>
+
+<div>
+    @Model.UsuarioId
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
