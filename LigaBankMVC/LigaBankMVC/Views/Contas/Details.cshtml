@@ -7,65 +7,75 @@
     ViewData["Title"] = "Details";
 }
 
-<div class=""></div>
-
-<div class="section-dados-cliente">
-    <div>
-        <img class="imagem-conta" src="~/img/avatar.jpg" />
+<div class="">
+    <div class="container-login">
+        <partial name="_LoginPartial" />
     </div>
-    <div style="display: flex; justify-content: space-evenly; flex-direction: column">
-        <h4>Olá, @Model.UsuarioId!</h4>
-        <div style="display: flex; flex-direction: column;">
-            <label>Conta:</label>
-            <input style="border: none;" asp-for="Id" type="text" readonly/>
+    <div class="section-dados-cliente">
+        <div>
+            <img class="imagem-conta" src="~/img/avatar.jpg" />
         </div>
-        <div style="display: flex; flex-direction: column;">
-            <label>Agência:</label>
-            <input style="border: none;" asp-for="NumeroDaAgencia" readonly/>
-        </div>
-        <div style="display: flex; flex-direction: column;">
-            <label>Saldo em conta:</label>
-            <div style="font-size: 1.2rem;">
-                <label>R$</label>
-                @Html.DisplayFor(model => model.SaldoDaConta)
+        <div style="display: flex; justify-content: space-evenly; flex-direction: column">
+            <h4>Olá, @Model.UsuarioId!</h4>
+            <div style="display: flex; flex-direction: column;">
+                <label>Conta:</label>
+                <input style="border: none;" asp-for="Id" type="text" readonly/>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <label>Agência:</label>
+                <input style="border: none;" asp-for="NumeroDaAgencia" readonly/>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <label>Saldo em conta:</label>
+                <div style="font-size: 1.2rem;">
+                    <label>R$</label>
+                    @Html.DisplayFor(model => model.SaldoDaConta)
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="barra-acoes">
+    <div class="barra-acoes">
+        <div>
+            <input id="checkbox-sacar" type="checkbox"/>
+            <label class="guia-sacar" for="checkbox-sacar">Sacar</label>
+            <div class="show-sacar">
+                <form asp-action="SaqueDoSaldo" method="post" class="section-sacar">
+                    <input asp-for="Id" type="text" hidden/>
+                    <label id="label-valor-saque">Digite o valor do saque:</labeL>
+                    <input id="input-saldo-conta" asp-for="SaldoDaConta" value="0" min="0.01" step="any"/>
+                    <button id="botao-saque" class="botoes-barra-acoes botao-saque" type="submit">Sacar</button>
+                </form>
+            </div>
+        </div>
 
-    <div>
-        <input id="checkbox-sacar" type="checkbox"/>
-        <label class="guia-sacar" for="checkbox-sacar">Sacar</label>
-        <div class="show-sacar">
-            <form asp-action="SaqueDoSaldo" method="post" class="section-sacar">
-                <input asp-for="Id" type="text" hidden/>
-                <label id="label-valor-saque">Digite o valor do saque:</labeL>
-                <input id="input-saldo-conta" asp-for="SaldoDaConta" value="0" min="0.01" step="any"/>
-                <button id="botao-saque" class="botoes-barra-acoes botao-saque" type="submit">Sacar</button>
-            </form>
+        <div >
+            <input id="checkbox-depositar" type="checkbox"/>
+            <label class="guia-depositar" for="checkbox-depositar">Depositar</label>
+            <div class="show-depositar">
+                <form asp-action="DepositoNoSaldo" method="post" class="section-depositar">
+                    <input asp-for="Id" type="text" hidden/>
+                    <label id="label-valor-deposito">Digite o valor do depósito:</labeL>
+                    <div>
+                        <label style="font-size: 1.2rem;">R$</label>
+                        <input id="campo-valor-deposito" style="height: 2rem; border: none;" id="input-saldo-conta" asp-for="SaldoDaConta" type="number" value="0"/>
+                    </div>
+                    <button id="botao-deposito" class="botoes-barra-acoes botao-deposito" type="submit">Depositar</button>
+                </form>
+            </div>
         </div>
     </div>
 
-    <div >
-        <input id="checkbox-depositar" type="checkbox"/>
-        <label class="guia-depositar" for="checkbox-depositar">Depositar</label>
-        <div class="show-depositar">
-            <form asp-action="DepositoNoSaldo" method="post" class="section-depositar">
-                <input asp-for="Id" type="text" hidden/>
-                <label id="label-valor-deposito">Digite o valor do depósito:</labeL>
-                <div>
-                    <label style="font-size: 1.2rem;">R$</label>
-                    <input id="campo-valor-deposito" style="height: 2rem; border: none;" id="input-saldo-conta" asp-for="SaldoDaConta" type="number" value="0"/>
-                </div>
-                <button id="botao-deposito" class="botoes-barra-acoes botao-deposito" type="submit">Depositar</button>
-            </form>
+    <div class="container-transferencias">
+        <div class="cabecalho-transferencias">
+            <label class="label-ultimas-transferencias">Últimas transferências</label>
         </div>
+        <hr />
     </div>
-</div>
 
-@*<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>*@
+    @*<partial name="" />*@
+    @*<div>
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+</div>
