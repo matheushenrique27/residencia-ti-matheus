@@ -1,0 +1,53 @@
+﻿@model LigaBankMVC.Models.Conta
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div style="display: flex;">
+    <div>
+        <img class="imagem-conta" src="~/img/avatar.jpg" />
+    </div>
+    <div style="display: flex; flex-direction: column">
+        @*<h4>Olá, @Model.UsuarioId!</h4>*@
+        <div>
+            Conta:
+            @Html.DisplayFor(model => model.UsuarioId);
+        </div>
+        <div>
+            Agência:
+            @Html.DisplayFor(model => model.NumeroDaAgencia)
+        </div>
+        <div>
+            Saldo:
+            @Html.DisplayFor(model => model.SaldoDaConta)
+        </div>
+    </div>
+</div>
+
+<div class="barra-acoes">
+    @*<form asp-action="SaqueDoSaldo" method="post">
+        <label>Digite o valor do saque:</labeL>
+        <input type="number" value=""/>
+        <button type="submit" class="botoes-barra-acoes botao-saque" name="something"><i class="fa fa-check"></i>Sacar</button>
+    </form>*@
+
+    <div class="">
+        <form asp-action="DepositoNoSaldo" method="post">
+            <input asp-for="Id" type="text" hidden/>
+            <label>Digite o valor do depósito:</labeL>
+            <input asp-for="SaldoDaConta" type="number" placeholder="0" value="0"/>
+            <button type="submit">Depositar</button>
+        </form>
+    </div>
+
+    @*<a class="" asp-page="" asp-route-returnUrl="">Histórico</a>*@
+</div>
+
+@*<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>*@
